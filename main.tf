@@ -205,8 +205,8 @@ resource "null_resource" "configure-cat-app" {
 }
 
 
-module "backupstorage"{
-  source = "app.terraform.io/sample-costco/azure-backup/azurerm"
+module "azure-backup" {
+  source = "ravensorb/azure-backup/azurerm"
   version = "1.0.2"
-  resource_group_name = "${var.prefix}-private"
+  resource_group_name = "${var.prefix}-public"
 }
